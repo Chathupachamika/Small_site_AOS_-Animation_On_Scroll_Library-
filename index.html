@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+   
+<style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
+  </style></head>
+    <body>
+        <header>
+            <div class="px-3 py-2 text-bg-dark border-bottom">
+                <div class="container">
+                    <div
+                        class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                        <a href="/"
+                            class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                            <svg class="bi me-2" width="40"
+                                height="32" role="img"
+                                aria-label="Bootstrap"><use
+                                    xlink:href="#bootstrap" /></svg>
+                        </a>
+
+                        <ul
+                            class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                            <li>
+                                <a href="#"
+                                    class="nav-link text-secondary">
+                                    <img src="img mahi/img icon/icons8-home-50.png" alt="" width="50" height="50" class="bi d-block mx-auto mb-1"
+                                    width="24" height="24"><use
+                                        xlink:href="#home" />
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="nav-link text-white">
+                                    <img src="img mahi/img icon/icons8-complete-50.png" alt="" width="50" height="50" class="bi d-block mx-auto mb-1"
+                                    width="24" height="24"><use
+                                        xlink:href="#home" />
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="nav-link text-white">
+                                    <img src="img mahi/img icon/icons8-add-48.png" alt="" width="50" height="50" class="bi d-block mx-auto mb-1"
+                                    width="24" height="24"><use
+                                        xlink:href="#home" />
+                                    Orders
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="nav-link text-white">
+                                    <img src="img mahi/img icon/icons8-premium-50.png" alt="" width="50" height="50" class="bi d-block mx-auto mb-1"
+                                    width="24" height="24"><use
+                                        xlink:href="#home" />
+                                    Products
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="nav-link text-white">
+                                    <img src="img mahi/img icon/icons8-search-50.png" alt="" width="50" height="50" class="bi d-block mx-auto mb-1"
+                                    width="24" height="24"><use
+                                        xlink:href="#home" />
+                                    Customers
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3 py-2 border-bottom mb-3">
+                <div
+                    class="container d-flex flex-wrap justify-content-center">
+                    <form
+                        class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto"
+                        role="search">
+                        <input type="search" class="form-control"
+                            placeholder="Search..."
+                            aria-label="Search">
+                    </form>
+
+                    <div class="text-end">
+                        <button type="button"
+                            class="btn btn-light text-dark me-2">Login</button>
+                        <button type="button"
+                            class="btn btn-primary">Sign-up</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row" ></div>
+            <div class="row">
+                <div class="col-6">
+
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row"></div>
+
+            <div class="row">
+                <div class="col-6" data-aos="fade-up-left" >
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Velit modi rerum quis quam molestiae fugiat dolore
+                        consectetur repudiandae veniam, mollitia optio
+                        laudantium in perspiciatis. Culpa atque perferendis
+                        ipsum veritatis repellat.
+                        Maxime explicabo animi quidem perspiciatis mollitia quis
+                        illo sapiente recusandae! Nobis aliquid eius nam,
+                        temporibus ipsa fugiat quibusdam voluptas sed iure, quo
+                        rerum, aliquam aspernatur. Tempora sed rem non animi?
+                    </p>
+                </div>
+                <div class="col-6" data-aos="fade-up-right">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugiat quod facere aliquam, officia quaerat atque sit
+                    pariatur magni delectus impedit ratione. Nemo eveniet
+                    assumenda architecto ipsa cum optio quam qui!
+                    ntur
+                    similique dolore placeat recusandae nisi error iure facilis
+                    dignissimos nobis corrupti ipsum. Odio vel eveniet a
+                    perspiciatis animi?
+                    Molestiae incidunt corrupti quas, rerum exercitationem in
+                    sint dignissimos a ex illum quasi molestias. Et harum
+                    quibusdam, qui nesciunt officiis aperiam facilis aspernatur
+                    maxime sit distinctio ab magnam dolorum. Quasi!
+                </div>
+            </div>
+        </div>
+<hr>
+      <main class="container">
+        <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+          <div class="col-lg-6 px-0" data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
+            <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
+            <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+            <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+          </div>
+        </div>
+        <div class="container">
+            <div class="row" ></div>
+            <div class="row">
+               
+            </div>
+        </div>
+        <div class="container">
+            <div class="row"></div>
+
+            <div class="row">
+                <div class="col-6" data-aos="fade-up-right" >
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Velit modi rerum quis quam molestiae fugiat dolore
+                        consectetur repudiandae veniam, mollitia optio
+                        laudantium in perspiciatis. Culpa atque perferendis
+                        ipsum veritatis repellat.
+                        Maxime explicabo animi quidem perspiciatis mollitia quis
+                        illo sapiente recusandae! Nobis aliquid eius nam,
+                        temporibus ipsa fugiat quibusdam voluptas sed iure, quo
+                        rerum, aliquam aspernatur. Tempora sed rem non animi?
+                    </p>
+                </div>
+                <div class="col-6" data-aos="fade-up-left">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugiat quod facere aliquam, officia quaerat atque sit
+                    pariatur magni delectus impedit ratione. Nemo eveniet
+                    assumenda architecto ipsa cum optio quam qui!
+                    ntur
+                    similique dolore placeat recusandae nisi error iure facilis
+                    dignissimos nobis corrupti ipsum. Odio vel eveniet a
+                    perspiciatis animi?
+                    Molestiae incidunt corrupti quas, rerum exercitationem in
+                    sint dignissimos a ex illum quasi molestias. Et harum
+                    quibusdam, qui nesciunt officiis aperiam facilis aspernatur
+                    maxime sit distinctio ab magnam dolorum. Quasi!
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row mb-2">
+          <div class="col-md-6" data-aos="zoom-out-left">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
+                <h3 class="mb-0">Featured post</h3>
+                <div class="mb-1 text-body-secondary">Nov 12</div>
+                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                  Continue reading
+                  <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+                </a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img src="img mahi/mahiii.jpg" alt="--bd-violet-rgb">
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6" data-aos="zoom-out-right">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
+                <h3 class="mb-0">Post title</h3>
+                <div class="mb-1 text-body-secondary">Nov 11</div>
+                <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                  Continue reading
+                  <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+                </a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img src="img mahi/MahiTalks.jpg" alt="">
+            </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row g-5">
+          <div class="col-md-8" data-aos="fade-up-right">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+              From the Firehose
+            </h3>
+      
+            <article class="blog-post" data-aos="fade-down-right>
+              <h2 class="display-5 link-body-emphasis mb-1">Sample blog post</h2>
+              <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
+      
+              <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+              <hr>
+              <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+              <h2>Blockquotes</h2>
+              <p>This is an example blockquote in action:</p>
+              <blockquote class="blockquote">
+                <p>Quoted text goes here.</p>
+              </blockquote>
+              <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+              <h3>Example lists</h3>
+              <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout. This is an example unordered list:</p>
+              <ul>
+                <li>First list item</li>
+                <li>Second list item with a longer description</li>
+                <li>Third list item to close it out</li>
+              </ul>
+              <p>And this is an ordered list:</p>
+              <ol>
+                <li>First list item</li>
+                <li>Second list item with a longer description</li>
+                <li>Third list item to close it out</li>
+              </ol>
+              <p>And this is a definition list:</p>
+              <dl>
+                <dt>HyperText Markup Language (HTML)</dt>
+                <dd>The language used to describe and define the content of a Web page</dd>
+                <dt>Cascading Style Sheets (CSS)</dt>
+                <dd>Used to describe the appearance of Web content</dd>
+                <dt>JavaScript (JS)</dt>
+                <dd>The programming language used to build advanced Web sites and applications</dd>
+              </dl>
+              <h2>Inline HTML elements</h2>
+              <p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
+              <ul>
+                <li><strong>To bold text</strong>, use <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>.</li>
+                <li><em>To italicize text</em>, use <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code>.</li>
+                <li>Abbreviations, like <abbr title="HyperText Markup Language">HTML</abbr> should use <code class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code>, with an optional <code class="language-plaintext highlighter-rouge">title</code> attribute for the full phrase.</li>
+                <li>Citations, like <cite>— Mark Otto</cite>, should use <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
+                <li><del>Deleted</del> text should use <code class="language-plaintext highlighter-rouge">&lt;del&gt;</code> and <ins>inserted</ins> text should use <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
+                <li>Superscript <sup>text</sup> uses <code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.</li>
+              </ul>
+              <p>Most of these elements are styled by browsers with few modifications on our part.</p>
+              <h2>Heading</h2>
+              <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+              <h3>Sub-heading</h3>
+              <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+              <pre><code>Example code block</code></pre>
+              <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+            </article>
+      
+            <article class="blog-post">
+              <h2 class="display-5 link-body-emphasis mb-1">Another blog post</h2>
+              <p class="blog-post-meta">December 23, 2020 by <a href="#">Jacob</a></p>
+      
+              <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+              <blockquote>
+                <p>Longer quote goes here, maybe with some <strong>emphasized text</strong> in the middle of it.</p>
+              </blockquote>
+              <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+              <h3>Example table</h3>
+              <p>And don't forget about tables in these posts:</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Upvotes</th>
+                    <th>Downvotes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Alice</td>
+                    <td>10</td>
+                    <td>11</td>
+                  </tr>
+                  <tr>
+                    <td>Bob</td>
+                    <td>4</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>Charlie</td>
+                    <td>7</td>
+                    <td>9</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td>Totals</td>
+                    <td>21</td>
+                    <td>23</td>
+                  </tr>
+                </tfoot>
+              </table>
+      
+              <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+            </article>
+      
+            <article class="blog-post">
+              <h2 class="display-5 link-body-emphasis mb-1">New feature</h2>
+              <p class="blog-post-meta">December 14, 2020 by <a href="#">Chris</a></p>
+      
+              <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+              <ul>
+                <li>First list item</li>
+                <li>Second list item with a longer description</li>
+                <li>Third list item to close it out</li>
+              </ul>
+              <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+            </article>
+      
+            <nav class="blog-pagination" aria-label="Pagination">
+              <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+              <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+            </nav>
+      
+          </div>
+      
+          <div class="col-md-4" data-aos="fade-up-left">
+            <div class="position-sticky" style="top: 2rem;">
+              <div class="p-4 mb-3 bg-body-tertiary rounded">
+                <h4 class="fst-italic">About</h4>
+                <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
+              </div>
+      
+              <div>
+                <h4 class="fst-italic">Recent posts</h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                      <img src="img mahi/MahiWorship.jpg" alt="768px" width="150">
+                        <h6 class="mb-0">Example blog post title</h6>
+                        <small class="text-body-secondary">January 15, 2024</small>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                        <img src="img mahi/MahiiLook.jpg" alt="" width="150">
+                        <div class="col-lg-8">
+                        <h6 class="mb-0">This is another blog post title</h6>
+                        <small class="text-body-secondary">January 14, 2024</small>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                        <img src="img mahi/Mahiigamma.jpg" alt="" width="150">
+                      <div class="col-lg-8">
+                        <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
+                        <small class="text-body-secondary">January 13, 2024</small>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+      
+              <div class="p-4">
+                <h4 class="fst-italic">Archives</h4>
+                <ol class="list-unstyled mb-0">
+                  <li><a href="#">March 2021</a></li>
+                  <li><a href="#">February 2021</a></li>
+                  <li><a href="#">January 2021</a></li>
+                  <li><a href="#">December 2020</a></li>
+                  <li><a href="#">November 2020</a></li>
+                  <li><a href="#">October 2020</a></li>
+                  <li><a href="#">September 2020</a></li>
+                  <li><a href="#">August 2020</a></li>
+                  <li><a href="#">July 2020</a></li>
+                  <li><a href="#">June 2020</a></li>
+                  <li><a href="#">May 2020</a></li>
+                  <li><a href="#">April 2020</a></li>
+                </ol>
+              </div>
+      
+              <div class="p-4">
+                <h4 class="fst-italic">Elsewhere</h4>
+                <ol class="list-unstyled">
+                  <li><a href="#">GitHub</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Facebook</a></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </main>
+      
+      <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        <p class="mb-0">
+          <a href="#">Back to top</a>
+        </p>
+      </footer>
+<div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>&copy; 2024 Company, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script>
+        AOS.init({
+            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 20, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration:2400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: true, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
+    </script>
+    </body>
+</html>
